@@ -1,0 +1,32 @@
+<ion-view class="pane" title="Book Details" hide-back-button="false" cache-view="false" hide-nav-bar="false">
+    <ion-content padding="true">
+        <div class="list card">
+            <div class="item item-text-wrap item-icon-left item-emp-card">
+                <i class="icon ion-document-text"></i>
+                <h2 class="empName karla">{{bookDetails.name}}</h2>
+                <p class="empTitle merriweather size14pt">{{bookDetails.author}}</p>
+                <span ng-repeat="category in bookDetails.category">
+                    <p class="merriweather size14pt">#{{category}}</p>
+                </span><br/>
+                <p class="merriweather size12pt">Publisher: {{bookDetails.publisher}}</p>
+                <p class="merriweather size12pt">Year: {{bookDetails.year}}</p>
+                <p class="merriweather size12pt">ISBN: {{bookDetails.isbn}}</p>
+                <p class="merriweather size12pt">Number Pages: {{bookDetails.pages}}</p>
+            </div>
+            <a href="#" class="item item-icon-left item-emp-card">
+                <i class="icon ion-chatbox"></i>
+                <ion-item class="item-text-wrap lubalin size10pt">{{bookDetails.comment}}</ion-item>
+            </a>
+            <a href="#" class="item item-icon-left item-emp-card">
+                <i class="icon ion-ios-image"></i>
+                <img ng-src="{{bookDetails.image}}">
+            </a>
+            <!-- these currently do not do anything, but have the scope for future enhancement -->
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#"><i class="icon ion-thumbsup"></i>Like</a>
+                <a class="tab-item" href="#"><i class="icon ion-chatbox"></i>Comment</a>
+                <a class="tab-item" href="#"><i class="icon ion-share"></i>Share</a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

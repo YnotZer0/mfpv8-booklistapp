@@ -1,0 +1,14 @@
+<ion-view class="pane custBack" title="Book List" hide-back-button="true" cache-view="false" hide-nav-bar="false">
+    <ion-content padding="false">
+        <ion-list class="animate-ripple">
+            <a ng-repeat="book in books" ui-sref="detail({bookId: book.id})" class="item item-thumbnail-left">
+                <img ng-src="{{book.image}}">
+                <h2 class="item-acct-title karla">{{book.name}}</h2>
+                  <span ng-repeat="category in book.category">
+                    <span>#{{category}}</span>
+                  </span>
+                <p class="empTitle merriweather">{{book.author}}</p>
+            </a>
+        </ion-list>
+    </ion-content>
+</ion-view>
